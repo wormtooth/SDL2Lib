@@ -28,19 +28,19 @@ If successfully finished, there is a folder **SDL2** in the root directory of th
 
 Add **SDL2** to Xcode project and link against the following frameworks:
 
-ApplicationServices.framework
-AudioToolbox.framework
-AudioUnit.framework
-Carbon.framework
-Cocoa.framework
-CoreAudio.framework
-CoreHaptics.framework
-CoreServices.framework
-CoreVideo.framework
-ForceFeedback.framework
-GameController.framework
-IOKit.framework
-Metal.framework
-OpenGL.framework
-QuartzCore.framework
-libiconv.tbd
+- ApplicationServices.framework
+- AudioToolbox.framework
+- AudioUnit.framework
+- Carbon.framework
+- Cocoa.framework
+- CoreAudio.framework
+- CoreHaptics.framework
+- CoreServices.framework
+- CoreVideo.framework
+- ForceFeedback.framework
+- GameController.framework
+- IOKit.framework
+- Metal.framework
+- OpenGL.framework
+- QuartzCore.framework
+- libiconv.tbd
