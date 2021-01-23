@@ -1,5 +1,15 @@
 SDL2_MIXER_VERSION=2.0.4
 SDL2_MIXER_SRC=https://www.libsdl.org/projects/SDL_mixer/release/SDL2_mixer-${SDL2_MIXER_VERSION}.tar.gz
+SDL2_MIXER_OPTS="
+--disable-music-flac-shared
+--disable-music-midi-fluidsynth-shared
+--disable-music-mod-mikmod-shared
+--disable-music-mod-modplug-shared
+--disable-music-mp3-mpg123-shared
+--disable-music-ogg-shared
+--disable-music-opus-shared
+--disable-shared
+"
 
 build_sdl2mixer() {
     if lib_existed libSDL2_mixer.a ; then
@@ -15,7 +25,9 @@ build_sdl2mixer() {
     deps="libogg flac mpg123 libvorbis"
     for dep in $deps; do
         if [[ $dep == flac ]]; then
-            extra_opts='--disable-cpplibs'
+            extra_opts=--disable-cpplibs
+        else
+            extra_opts=
         fi
         echo "=== Building dependency: $dep ==="
         enter_folder $dep
@@ -26,7 +38,7 @@ build_sdl2mixer() {
 
     cd ..
 
-    build
+    build $SDL2_MIXER_OPTS
     echo "##### Built SDL2_mixer-${SDL2_MIXER_VERSION} #####"
 }
 

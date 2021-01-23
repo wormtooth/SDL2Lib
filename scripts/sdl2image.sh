@@ -23,6 +23,8 @@ build_sdl2image() {
         fi
         if [[ $dep == tiff* ]]; then
             extra_opts=--disable-cxx
+        else
+            extra_opts=
         fi
         build $extra_opts
         cd ..

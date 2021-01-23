@@ -43,4 +43,6 @@ Add **SDL2** to Xcode project and link against the following frameworks:
 - Metal.framework
 - OpenGL.framework
 - QuartzCore.framework
+- libbz2.tbd
+- libz.tbd
 - libiconv.tbd

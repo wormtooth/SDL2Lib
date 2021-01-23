@@ -2,11 +2,13 @@
 
 WORK_DIR=`pwd`
 TMP_DIR=$WORK_DIR/tmp
-BUILD_DIR=$TMP_DIR/macos
+BUILD_DIR=$TMP_DIR/osx
 PROD_DIR=$WORK_DIR/SDL2
 SCRIPTS_DIR=$WORK_DIR/scripts
 mkdir -p $TMP_DIR $BUILD_DIR
+
 CONFIG_OPTS="--prefix=${BUILD_DIR} --enable-shared=no"
+
 export PKG_CONFIG_PATH=$BUILD_DIR/lib/pkgconfig:$PKG_CONFIG_PATH
 export CFLAGS="-I$BUILD_DIR/include"
 export LDFLAGS="-L$BUILD_DIR/lib"
