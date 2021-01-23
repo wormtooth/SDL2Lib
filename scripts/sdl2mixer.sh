@@ -1,13 +1,13 @@
 SDL2_MIXER_VERSION=2.0.4
 SDL2_MIXER_SRC=https://www.libsdl.org/projects/SDL_mixer/release/SDL2_mixer-${SDL2_MIXER_VERSION}.tar.gz
 SDL2_MIXER_OPTS="
+--disable-music-mod
+--disable-music-opus
+--disable-music-midi-fluidsynth
+--disable-music-midi-timidity
 --disable-music-flac-shared
---disable-music-midi-fluidsynth-shared
---disable-music-mod-mikmod-shared
---disable-music-mod-modplug-shared
 --disable-music-mp3-mpg123-shared
 --disable-music-ogg-shared
---disable-music-opus-shared
 --disable-shared
 "
 
